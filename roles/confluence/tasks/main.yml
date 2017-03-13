@@ -1,0 +1,11 @@
+---
+- name: Create a confluence page
+  confluence:
+   url: "{{confluence_url}}"
+   username: "{{confluence_user}}"
+   password: "{{confluence_pass}}"
+   title: "{{title}}"
+   ancestor: "{{confluence_ancestor}}"
+   action: create
+  register: issue
+- debug: var=issue
